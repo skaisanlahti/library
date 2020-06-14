@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <title>Library</title>
+</head>
+<body>
+    <header class="lb-head">
+        <h1 class="lb-head__title">Library</h1>
+    </header>
+    <main class="lb-main">
+        <div class="lb-main__add-form">
+            <div class="lb-main__entry">
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title" placeholder="Book Name">
+            </div>
+            <div class="lb-main__entry">
+                <label for="author">Author</label>
+                <input id="author" type="text" name="author" placeholder="Author Name">
+            </div>
+            <div class="lb-main__entry">
+                <label for="pages">Pages</label>
+                <input id="pages" type="number" name="pages">
+            </div>
+            <div class="lb-main__entry">
+                <label for="read">Status</label>
+                <button id="read" name="read">Unread</button>
+            </div>
+            <button class="lb-main__add-button">Add New Book</button>
+        </div>
+        <table class="lb-main__table">
+            <thead class="lb-main__table-head">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Status</th>
+                <th>Delete</th>
+            </thead>
+            <tr class="lb-main__table-row">
+                <td>Name of a book</td>
+                <td>Author McGregor</td>
+                <td>364</td>
+                <td><button>Unread</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr class="lb-main__table-row">
+                <td>Name of a book</td>
+                <td>Author McGregor</td>
+                <td>364</td>
+                <td><button>Unread</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr class="lb-main__table-row">
+                <td>Name of a book</td>
+                <td>Author McGregor</td>
+                <td>364</td>
+                <td><button>Unread</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+        </table>
+    </main>
+    <footer class="lb-foot">
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>

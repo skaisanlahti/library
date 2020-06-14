@@ -1,0 +1,70 @@
+/*=== Imports ===
+=============================================================================*/
+@import "_fonts.scss";
+@import "_reset.scss";
+@import "_base.scss";
+
+/*=== Main Styles ===
+=============================================================================*/
+body {
+    min-height: 100vh;
+}
+button {
+    font-family: raleway;
+}
+
+.lb-head {
+    text-align: center;
+
+    &__title {
+        font-size: 40px;
+        padding: 20px;
+    }
+}
+
+.lb-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__add-form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        #read {
+            width: 100px;
+        }
+    }
+
+    &__add-button {
+        font-size: 18px;
+        padding: 10px 20px;
+        height: 48px;
+    }
+
+    &__table {
+        width: 800px;
+    }
+
+    &__table-head, &__table-row {
+        
+        th, td {
+            text-align: left;
+            border-bottom: 1px solid hsl(0, 0%, 85%);
+            padding: 10px;
+        }
+
+        button {
+            width: 100px;
+        }
+    }
+}
