@@ -58,12 +58,14 @@ function Book(title, author, pages, read){
     this.read = read;
 }
 function addBookToLibrary(library){
+    // get new book from form values
     const title = document.querySelector("#title").value;
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
     const read = document.querySelector("#read").innerText === "Read" ? true : false;
     let newBook = new Book(author, title, pages, read);
     library.push(newBook);
+    // return form to defaults
     document.querySelector("#title").value = "";
     document.querySelector("#author").value = "";
     document.querySelector("#pages").value = "";
@@ -101,7 +103,7 @@ function render(library, table){
         read.appendChild(readButton);
         row.appendChild(remove);
         remove.appendChild(removeButton);
-        // add event listeners
+        // add event listeners to buttons
         readButton.addEventListener("click", function(e){
             library[i].read = !library[i].read;
             this.innerText = library[i].read ? "Read" : "Unread";
@@ -126,4 +128,3 @@ if (!localStorage.getItem("lib")){
     myLibrary = JSON.parse(localStorage.getItem("lib"));
     render(myLibrary, libraryTable);
 }
-
