@@ -51,11 +51,13 @@ readToggle.addEventListener("click", function(e){
 
 /*=== Functions ===
 =============================================================================*/
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor (title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 function addBookToLibrary(library){
     // get new book from form values
@@ -63,7 +65,7 @@ function addBookToLibrary(library){
     const author = document.querySelector("#author").value;
     const pages = document.querySelector("#pages").value;
     const read = document.querySelector("#read").innerText === "Read" ? true : false;
-    let newBook = new Book(author, title, pages, read);
+    let newBook = new Book(title, author, pages, read);
     library.push(newBook);
     // return form to defaults
     document.querySelector("#title").value = "";
